@@ -12,5 +12,8 @@
 <body>
 	服务器正在维护，请稍等
 	<%= exception %>
+	<%
+		System.out.println(exception);
+	%>
 </body>
 </html>
