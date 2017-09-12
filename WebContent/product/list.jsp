@@ -10,7 +10,7 @@
 <%
 	//取得request域中的商品信息列表
 	List<Product> list = (List<Product>)request.getAttribute("list");
-
+	System.out.println(list.toString());
 %>
 	<table border="1" align="center" width="500">
 		<tr>
@@ -18,8 +18,12 @@
 			<th>商品名称</th>
 			<th>价格</th>
 			<th>描述</th>
+			<th>图片</th>
 		</tr>
 		<%
+			String path = request.getContextPath();
+			System.out.println(path);
+			int i = 0;
 			for( Product p : list ){
 		%>
 		<tr>
@@ -27,6 +31,14 @@
 			<td><%=p.getName() %></td>
 			<td><%=p.getPrice() %></td>
 			<td><%=p.getDescription() %></td>
+			<td>
+				<%
+					i++;
+					String path2 = path + p.getImg_path();
+				%>
+				<img style="height: 100px;width: 100px " src="<%=path2 %>"/><br/>
+					<a href="<%=path2%>">图<%=i %></a>
+			</td>
 		</tr>
 		<%
 			}
