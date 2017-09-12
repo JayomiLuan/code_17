@@ -13,7 +13,6 @@
 	所以，目标被导入的页面也会被单独编译成Serlvet
 	在运行时才对目标进行执行，得到最终的显示结果
 	-->
-	<% String msg = "动态导入！！！"; %>
 	<jsp:include page="head.jsp"></jsp:include>
 	这是主页面的内容。
 	

@@ -14,6 +14,7 @@
 	 <%
 	 	String msg = "hello head!!!";
 	 %>
+
 	 
 	<%@ include file="head.jsp" %>	
 	<hr/>
