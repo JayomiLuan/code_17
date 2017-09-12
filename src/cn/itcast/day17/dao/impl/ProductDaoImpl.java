@@ -15,7 +15,7 @@ public class ProductDaoImpl implements ProductDao {
 		//从数据库中取得所有商品信息
 		QueryRunner qr = new QueryRunner( JdbcUtils.getDataSource() );
 		
-		List<Product> list = (List)qr.query("select id,name,price,description from tb_product", new BeanListHandler(Product.class) );
+		List<Product> list = (List)qr.query("select id,name,price,description,img_path from tb_product", new BeanListHandler(Product.class) );
 		return list;
 	}
 
