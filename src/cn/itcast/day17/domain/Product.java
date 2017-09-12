@@ -5,6 +5,25 @@ public class Product {
 	private String name;
 	private double price;
 	private String description;
+	private String img_path;
+
+	@Override
+	public String toString() {
+		return "Product{" +
+				"id='" + id + '\'' +
+				", name='" + name + '\'' +
+				", price=" + price +
+				", description='" + description + '\'' +
+				", img_path='" + img_path + '\'' +
+				'}';
+	}
+
+	public String getImg_path() {
+		return img_path;
+	}
+	public void setImg_path(String img_path) {
+		this.img_path = img_path;
+	}
 	public String getId() {
 		return id;
 	}
